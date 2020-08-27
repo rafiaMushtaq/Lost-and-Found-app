@@ -1,0 +1,41 @@
+<nav class="navbar navbar-default">
+  
+        <div id="navbar" class="collapse navbar-collapse">
+          <ul class="nav navbar-nav">
+            <li><a href="/">Home</a></li>
+
+          </ul>
+
+          <ul class="nav navbar-nav navbar-right">
+            <body>
+            <h1>
+                <center>Discover Items
+                    <form class="example" method="post" action="" 
+                    style="margin:auto;max-width:600px">
+                        <input type="text" placeholder="Search by name or 
+                        location, or all to see all the data" name="articles">
+                        <button type="submit"><i class="fa fa-search"></i>
+                        </button>
+                    </form>
+                </center>
+            </h1>
+
+
+
+            <center>
+            <p>Search items are
+                <ul class="list-group">
+                    {% for article in data %}
+                        <li class="list-group-item">{{article.title}}</li>
+                        <li class="list-group-item">{{article.body}}</li>
+                        <li class="list-group-item">{{article.location}}</li>
+                    {% endfor %}
+                </ul>
+            </p>
+            </center>
+            </body>
+
+            </ul>
+         </div><!--/.nav-collapse -->
+      </div>
+    </nav>
